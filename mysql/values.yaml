@@ -1,0 +1,4 @@
+deployment:
+  replica: 1
+  imageName: happielearning/mysql
+  imageVersion: 1.0.0
