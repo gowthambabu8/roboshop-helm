@@ -1,4 +1,4 @@
 deployment:
   replica: "1"
-  imageName: "redis"
-  imageVersion: "7"
+  imageName: redis
+  imageVersion: 7
