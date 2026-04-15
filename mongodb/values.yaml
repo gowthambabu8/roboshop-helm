@@ -1,4 +1,4 @@
 deployment:
   replica: 1
-  imageName: happielearning/mongo
+  imageName: happielearning/mongodb
   imageVersion: 1.4.0
