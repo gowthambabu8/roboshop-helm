@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: redis
   namespace: roboshop
   labels:
     project: roboshop
     tier: db
-    component: mysql
+    component: redis
 spec: 
   replicas: {{ .Values.deployment.replica }}
   selector:
     matchLabels:
       project: roboshop
       tier: db
-      component: mysql
+      component: redis
   template:
     metadata:
-      name: mysql
+      name: redis
       labels:
         project: roboshop
         tier: db
-        component: mysql
+        component: redis
     spec:
       containers:
-        - name: mysql
-          image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"
+        - name: redis
+          image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageversion }}"
