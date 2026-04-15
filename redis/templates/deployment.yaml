@@ -24,4 +24,4 @@ spec:
     spec:
       containers:
         - name: redis
-          image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageversion }}"
+          image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"
