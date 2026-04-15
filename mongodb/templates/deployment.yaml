@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  namespace: roboshop
+  labels:
+    project: roboshop
+    tier: db
+    component: mongodb
+spec: 
+  replicas: {{ .Values.deployment.replica}}
+  selector:
+    matchLabels:
+      project: roboshop
+      tier: db
+      component: mongodb
+  template:
+    metadata:
+      name: mongodb
+      labels:
+        project: roboshop
+        tier: db
+        component: mongodb
+    spec:
+      containers:
+        - name: mongodb
+          #image: happielearning/mongo:1.0.0
+          image: "{{ .Values.deployment.imageName}}:{{.Values.deployment.imageVersion}}"
